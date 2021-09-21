@@ -1,0 +1,260 @@
+<html><head>
+    <meta charset="UTF-8">
+    <title>Audio samples from "Crossed-lingual Multi-Speaker Text-To-Speech Synthesis With Multi-reference Gaussian Mixture Variational Autoencoders"</title>
+  </head>
+    <article>
+      <header>
+        <h1>Audio samples from "Crossed-lingual Multi-Speaker Text-To-Speech Synthesis With Multi-reference Gaussian Mixture Variational Autoencoders"</h1>
+      </header>
+    </article>
+
+    <p><b>Authors</b>: Hai Zhu, Shujun Liu, Huayi Zhan </p>
+
+    <div><b>Abstract:</b>
+        <br> In this paper, we introduce the Multi-reference Gaussian Mixture Variational Autoencoder (GMVAE) to improve the performance of the crossed-language multi-speaker text-to-speech (TTS) speech synthesis model.
+        Previous works are able to model speaker and language space via categorical observed labels but there may still be many latent variations that can influence speech quality, moreover, how to adjust the strength of accent and improve speaker similarity still remains a challenge.
+        Our main contributions include three-fold. First, we convert the pronunciation of English to pinyin phoneme so that different languages share the same phonemic representations, and regard crossed-lingual speech synthesis as a problem of language prosody transfer from multi-speaker.
+        Second, we propose a mechanism to construct disentangled continuous space of speaker identity and language prosody for crossed-lingual speech synthesis. Third, we propose a crossed-lingual multi-speaker model that can simply control the accent strength via adjusting accent scalar.
+        Experimental results show that our proposed model get a better performance on subjective evaluation.<br><br>
+
+    </div>
+
+    <p class="toc_title">Contents</p>
+    <div id="toc_container">
+    <ul>
+      <li><a href="#mandarin_tts">Mandarin</a></li>
+      <li><a href="#english_tts">English</a></li>
+      <li><a href="#cross_tts">Cross-lingual</a></li>
+       <li><a href="#accent_tts">Accent control</a></li>
+    </ul>
+    </div>
+
+    <p>&nbsp;</p>
+      <div>
+        We train our model on 4 open-source in the Mandarin monolingual and English monolingual dataset:
+          (1)DB-1 is a public Mandarin speech dataset consisting of 12 hours of a single female speaker;
+          (2)AISHELL-3 is a Mandarin corpus of 85 hours of different regions from 218 speakers;
+          (3)LJ Speech is a public domain speech dataset that contains approximately 24 hours of a female English native speaker;
+          (4)VCTK is an English corpus consisting 44 hours of various accents speech from 109 speakers.
+
+	<br><br>
+	All of the phrases below are unseen during training.
+      </div>
+
+		<!-- Section 4.1 -->
+		<div>
+      <a name="mandarin_tts"><h2>Mandarin</h2></a>
+
+      <a name="mandarin_tts.sample"><h3>Mandarin Speaker</h3></a>
+      <div class="text_gst">Text: 曹雅琪回到教室时，里面空无一人，都去上体育课了.</div>
+      <!--Text: The plenty around me, the ease and independence, gave me a delightful sense of comfort.</h4>-->
+      <table>
+        <tbody>
+        <tr>
+          <td nowrap="">Reference</td>
+          <td><audio controls=""><source src="demos/Mandarin/Mandarin_speaker/reference.wav"></audio></td>
+        </tr>
+        <tr>
+          <td nowrap="">Baseline</td>
+          <td><audio controls=""><source src="demos/Mandarin/Mandarin_speaker/baseline.wav"></audio></td>
+        </tr>
+        <tr>
+          <td nowrap="">Proposal1</td>
+          <td><audio controls=""><source src="demos/Mandarin/Mandarin_speaker/proposal1.wav"></audio></td>
+        </tr>
+         <tr>
+          <td nowrap="">Proposale2</td>
+          <td><audio controls=""><source src="demos/Mandarin/Mandarin_speaker/proposal2.wav"></audio></td>
+        </tr>
+       </tbody>
+      </table>
+      <a name="multi_tts.sample"><h3>English Speaker</h3></a>
+      <div class="text_gst">Text: 场外基金的投资者，可以在基金开放日的交易时间内，到销售网点修改分红方式.</div>
+      <!--Text: The plenty around me, the ease and independence, gave me a delightful sense of comfort.</h4>-->
+      <table>
+        <tbody>
+        <tr>
+          <td nowrap="">Reference</td>
+          <td><audio controls=""><source src="demos/Mandarin/English_speaker/reference.wav"></audio></td>
+        </tr>
+        <tr>
+          <td nowrap="">Baseline</td>
+          <td><audio controls=""><source src="demos/Mandarin/English_speaker/baseline.wav"></audio></td>
+        </tr>
+        <tr>
+          <td nowrap="">Proposal1</td>
+          <td><audio controls=""><source src="demos/Mandarin/English_speaker/proposal1.wav"></audio></td>
+        </tr>
+         <tr>
+          <td nowrap="">Proposal2</td>
+          <td><audio controls=""><source src="demos/Mandarin/English_speaker/proposal2.wav"></audio></td>
+        </tr>
+       </tbody>
+      </table>
+
+      <a name="english_tts"><h2>English</h2></a>
+
+      <a name="mandarin_tts.sample"><h3>Mandarin Speaker</h3></a>
+      <div class="text_gst">Text: In the meanwhile the air is filling with the perfume of promise.</div>
+      <!--Text: The plenty around me, the ease and independence, gave me a delightful sense of comfort.</h4>-->
+      <table>
+        <tbody>
+        <tr>
+          <td nowrap="">Reference</td>
+          <td><audio controls=""><source src="demos/English/Mandarin_speaker/reference.wav"></audio></td>
+        </tr>
+        <tr>
+          <td nowrap="">Baseline</td>
+          <td><audio controls=""><source src="demos/English/Mandarin_speaker/baseline.wav"></audio></td>
+        </tr>
+        <tr>
+          <td nowrap="">Proposal1</td>
+          <td><audio controls=""><source src="demos/English/Mandarin_speaker/proposal1.wav"></audio></td>
+        </tr>
+         <tr>
+          <td nowrap="">Proposale2</td>
+          <td><audio controls=""><source src="demos/English/Mandarin_speaker/proposal2.wav"></audio></td>
+        </tr>
+       </tbody>
+      </table>
+      <a name="multi_tts.sample"><h3>English Speaker</h3></a>
+      <div class="text_gst">Text: American officials have not determined the cause of the accident.</div>
+      <!--Text: The plenty around me, the ease and independence, gave me a delightful sense of comfort.</h4>-->
+      <table>
+        <tbody>
+        <tr>
+          <td nowrap="">Reference</td>
+          <td><audio controls=""><source src="demos/English/English_speaker/reference.wav"></audio></td>
+        </tr>
+        <tr>
+          <td nowrap="">Baseline</td>
+          <td><audio controls=""><source src="demos/English/English_speaker/baseline.wav"></audio></td>
+        </tr>
+        <tr>
+          <td nowrap="">Proposal1</td>
+          <td><audio controls=""><source src="demos/English/English_speaker/proposal1.wav"></audio></td>
+        </tr>
+         <tr>
+          <td nowrap="">Proposal2</td>
+          <td><audio controls=""><source src="demos/English/English_speaker/proposal2.wav"></audio></td>
+        </tr>
+       </tbody>
+      </table>
+
+            </table>
+      <a name="cross_tts"><h2>Crossed-lingual</h2></a>
+      <a name="multi_tts.sample"><h3>Mandarin Speaker</h3></a>
+       <table>
+        <tbody>
+        <tr>
+        	<td nowrap=""></td>
+        	<td align="center"><div class="text_gst">Text: be careful，这里的车辆很多.</div></td>
+            <td align="center"><div class="text_gst">Text: It is not long term，但是我需要时间.</div></td>
+            <td align="center"><div class="text_gst">Text: 请先打开excel，再打开word.</div></td>
+            <td align="center"><div class="text_gst">Text: Who will perform这些测试.</div></td>
+        </tr>
+        <tr>
+          <td nowrap="">Reference</td>
+          <td><audio controls=""><source src="demos/Crossed-lingual/Mandarin/reference.wav"></audio></td>
+        <tr>
+        <tr>
+          <td nowrap="">Baseline</td>
+          <td><audio controls=""><source src="demos/Crossed-lingual/Mandarin/baseline_0.wav"></audio></td>
+          <td><audio controls=""><source src="demos/Crossed-lingual/Mandarin/baseline_1.wav"></audio></td>
+          <td><audio controls=""><source src="demos/Crossed-lingual/Mandarin/baseline_2.wav"></audio></td>
+          <td><audio controls=""><source src="demos/Crossed-lingual/Mandarin/baseline_3.wav"></audio></td>
+        </tr>
+        <tr>
+          <td nowrap="">Proposal1</td>
+          <td><audio controls=""><source src="demos/Crossed-lingual/Mandarin/proposal1_0.wav"></audio></td>
+          <td><audio controls=""><source src="demos/Crossed-lingual/Mandarin/proposal1_1.wav"></audio></td>
+          <td><audio controls=""><source src="demos/Crossed-lingual/Mandarin/proposal1_2.wav"></audio></td>
+          <td><audio controls=""><source src="demos/Crossed-lingual/Mandarin/proposal1_3.wav"></audio></td>
+        </tr>
+        <tr>
+          <td nowrap="">Proposal2</td>
+          <td><audio controls=""><source src="demos/Crossed-lingual/Mandarin/proposal2_0.wav"></audio></td>
+          <td><audio controls=""><source src="demos/Crossed-lingual/Mandarin/proposal2_1.wav"></audio></td>
+          <td><audio controls=""><source src="demos/Crossed-lingual/Mandarin/proposal2_2.wav"></audio></td>
+          <td><audio controls=""><source src="demos/Crossed-lingual/Mandarin/proposal2_3.wav"></audio></td>
+        </tr>
+      </tbody></table>
+      <a name="multi_tts.sample"><h3>English Speaker</h3></a>
+       <table>
+        <tbody>
+        <tr>
+        	<td nowrap=""></td>
+        	<td align="center"><div class="text_gst">Text: 使用左侧车道一路驶向San Francisco.</div></td>
+            <td align="center"><div class="text_gst">Text: 等到明年，A new school will be built..</div></td>
+            <td align="center"><div class="text_gst">Text: It is not long term，但是我需要时间.</div></td>
+            <td align="center"><div class="text_gst">Text: 请DJ播放一首make you feel my love.</div></td>
+        </tr>
+        <tr>
+          <td nowrap="">Reference</td>
+          <td><audio controls=""><source src="demos/Crossed-lingual/English/reference.wav"></audio></td>
+        <tr>
+        <tr>
+          <td nowrap="">Baseline</td>
+          <td><audio controls=""><source src="demos/Crossed-lingual/English/baseline_0.wav"></audio></td>
+          <td><audio controls=""><source src="demos/Crossed-lingual/English/baseline_1.wav"></audio></td>
+          <td><audio controls=""><source src="demos/Crossed-lingual/English/baseline_2.wav"></audio></td>
+          <td><audio controls=""><source src="demos/Crossed-lingual/English/baseline_3.wav"></audio></td>
+        </tr>
+        <tr>
+          <td nowrap="">Proposal1</td>
+          <td><audio controls=""><source src="demos/Crossed-lingual/English/proposal1_0.wav"></audio></td>
+          <td><audio controls=""><source src="demos/Crossed-lingual/English/proposal1_1.wav"></audio></td>
+          <td><audio controls=""><source src="demos/Crossed-lingual/English/proposal1_2.wav"></audio></td>
+          <td><audio controls=""><source src="demos/Crossed-lingual/English/proposal1_3.wav"></audio></td>
+        </tr>
+        <tr>
+          <td nowrap="">Proposal2</td>
+          <td><audio controls=""><source src="demos/Crossed-lingual/English/proposal2_0.wav"></audio></td>
+          <td><audio controls=""><source src="demos/Crossed-lingual/English/proposal2_1.wav"></audio></td>
+          <td><audio controls=""><source src="demos/Crossed-lingual/English/proposal2_2.wav"></audio></td>
+          <td><audio controls=""><source src="demos/Crossed-lingual/English/proposal2_3.wav"></audio></td>
+        </tr>
+      </tbody></table>
+
+      <p>&nbsp;</p>
+
+      <p>&nbsp;</p>
+      <a name="accent_tts"><h2>Accent Control</h2></a>
+      <!--Text: The plenty around me, the ease and independence, gave me a delightful sense of comfort.</h4>-->
+      <table>
+        <tbody>
+        <tr>
+        	<td nowrap=""> </td>
+            <td align="left"><div class="text_gst">Text: 使用左侧车道，一路驶向San Francisco.</div></td>
+        	<td align="center"><div class="text_gst">Text: be careful,这里的车辆很多.</div></td>
+            <td align="left"><div class="text_gst">Text: 明天的天气will be to hot,记得打太阳伞.</div></td>
+        </tr>
+        <tr>
+          <td nowrap="">Reference Speaker</td>
+          <td><audio controls=""><source src="demos/accents/reference.wav"></audio></td>
+        </tr>
+
+        <tr>
+          <td nowrap="">accent scalar=0.5</td>
+          <td><audio controls=""><source src="demos/accents/0.accent_scalar=0.5.wav"></audio></td>
+          <td><audio controls=""><source src="demos/accents/1.accent_scalar=0.5.wav"></audio></td>
+          <td><audio controls=""><source src="demos/accents/2.accent_scalar=0.5.wav"></audio></td>
+        </tr>
+        <tr>
+          <td nowrap="">accent scalar=1</td>
+          <td><audio controls=""><source src="demos/accents/0.accent_scalar=1.0.wav"></audio></td>
+          <td><audio controls=""><source src="demos/accents/1.accent_scalar=1.0.wav"></audio></td>
+          <td><audio controls=""><source src="demos/accents/2.accent_scalar=1.0.wav"></audio></td>
+        </tr>
+        <tr>
+        <td nowrap="">accent scalar=3</td>
+          <td><audio controls=""><source src="demos/accents/0.accent_scalar=3.0.wav"></audio></td>
+          <td><audio controls=""><source src="demos/accents/1.accent_scalar=3.0.wav"></audio></td>
+          <td><audio controls=""><source src="demos/accents/2.accent_scalar=3.0.wav"></audio></td>
+        </tr>
+       </tbody>
+
+
+    </div>
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
