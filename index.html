@@ -11,11 +11,7 @@
     <p><b>Authors</b>: Hai Zhu, Shujun Liu, Huayi Zhan </p>
 
     <div><b>Abstract:</b>
-        <br> In this paper, we introduce the Multi-reference Gaussian Mixture Variational Autoencoder (GMVAE) to improve the performance of the crossed-language multi-speaker text-to-speech (TTS) speech synthesis model.
-        Previous works are able to model speaker and language space via categorical observed labels but there may still be many latent variations that can influence speech quality, moreover, how to adjust the strength of accent and improve speaker similarity still remains a challenge.
-        Our main contributions include three-fold. First, we convert the pronunciation of English to pinyin phoneme so that different languages share the same phonemic representations, and regard crossed-lingual speech synthesis as a problem of language prosody transfer from multi-speaker.
-        Second, we propose a mechanism to construct disentangled continuous space of speaker identity and language prosody for crossed-lingual speech synthesis. Third, we propose a crossed-lingual multi-speaker model that can simply control the accent strength via adjusting accent scalar.
-        Experimental results show that our proposed model get a better performance on subjective evaluation.<br><br>
+        <br> In this paper, we introduce a novel crossed-lingual multi-speaker text-to-speech (TTS) synthesis approach for producing high-quality speech for native/foreign speakers in English and Mandarin. Previous works are able to model speaker and language space via categorical observed labels but there may still be many latent variations that can influence speech quality. Moreover, how to get better disentangled latent representations of speaker and language space still remains a challenge. To solve these issues, we propose a novel generative mechanism and present the Multi-reference Gaussian Mixture Variational Autoencoder (GMVAE) model to improve the performance of crossed-lingual TTS. By adjusting the accent scalar, our model can control the accent strength and improve the speaker similarity. Experimental results show that our proposed model has learned reasonable representations in latent space and get better performance on subjective evaluation.<br><br>
 
     </div>
 
@@ -44,7 +40,6 @@
 		<!-- Section 4.1 -->
 		<div>
       <a name="mandarin_tts"><h2>Mandarin</h2></a>
-
       <a name="mandarin_tts.sample"><h3>Mandarin Speaker</h3></a>
       <div class="text_gst">Text: 曹雅琪回到教室时，里面空无一人，都去上体育课了.</div>
       <!--Text: The plenty around me, the ease and independence, gave me a delightful sense of comfort.</h4>-->
